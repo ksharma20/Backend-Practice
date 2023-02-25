@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sockets Example</title>
+		<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+	</head>
+	<body>
+		<center>
+			<h1>Sockets Example with ExpressJS & Socket.io</h1>
+			<h2>Create Content</h2>
+			<form id="createContent" onsubmit="return false">
+				<label for="cid">Content ID</label>
+				<input type="number" name="cid" id="cid" />
+
+				<label for="cname">Content Name</label>
+				<input type="text" name="cname" id="cname" />
+
+				<button type="submit">Create</button>
+			</form>
+			<h2>All Content</h2>
+		</center>
+		<ol id="allContent"></ol>
+		<script src="client.js"></script>
+	</body>
+</html>

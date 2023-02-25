@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script
+      src="https://cdn.socket.io/4.3.2/socket.io.min.js"
+      integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1>Create Todo</h1>
+    <form id="createTodo" onsubmit="return false">
+      <label for="todoId"> ID </label>
+      <input type="number" name="id" id="todoId" />
+      <label for="todoTitle"> Title </label>
+      <input type="text" name="Title" id="todoTitle" placeholder="Title" />
+      <label for="todoComp"> Completed ? </label>
+      <input type="radio" name="todoComp" id="todoComp_true" value="true" />
+      True
+      <input type="radio" name="todoComp" value="false" checked />
+      False &nbsp
+      <button type="submit" onclick="createTodo">Create</button>
+    </form>
+    <h1>Tasks</h1>
+    <ol id="todoTasks"></ol>
+    <h1>Update Todo</h1>
+    <form id="updateTodo" onsubmit="return false">
+      <label for="todoId"> ID </label>
+      <input type="number" name="id" id="todoId" />
+      <label for="todoTitle"> Title </label>
+      <input
+        type="text"
+        name="Title"
+        id="todoTitle"
+        placeholder="Only If Title need to be updated"
+      />
+      <label for="todoComp"> Completed ? </label>
+      <input type="radio" name="todoComp" id="todoComp_true" checked />
+      True
+      <input type="radio" name="todoComp" />
+      False &nbsp
+      <button type="submit" onclick="updateTodo">Create</button>
+    </form>
+    <h3>Errors</h3>
+    <p id="errors"></p>
+    <script src="client.js"></script>
+  </body>
+</html>
